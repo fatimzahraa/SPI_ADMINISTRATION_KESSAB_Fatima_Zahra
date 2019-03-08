@@ -29,13 +29,6 @@ export namespace Components {
     'retour'?: RouterHistory;
   }
 
-  interface DetailSearch {
-    'match': MatchResults;
-  }
-  interface DetailSearchAttributes extends StencilHTMLAttributes {
-    'match'?: MatchResults;
-  }
-
   interface SpiCandidat {}
   interface SpiCandidatAttributes extends StencilHTMLAttributes {}
 
@@ -65,7 +58,6 @@ declare global {
   interface StencilElementInterfaces {
     'AddEns': Components.AddEns;
     'DetailEnseignant': Components.DetailEnseignant;
-    'DetailSearch': Components.DetailSearch;
     'SpiCandidat': Components.SpiCandidat;
     'SpiFormation': Components.SpiFormation;
     'SpiHeader': Components.SpiHeader;
@@ -79,7 +71,6 @@ declare global {
   interface StencilIntrinsicElements {
     'add-ens': Components.AddEnsAttributes;
     'detail-enseignant': Components.DetailEnseignantAttributes;
-    'detail-search': Components.DetailSearchAttributes;
     'spi-candidat': Components.SpiCandidatAttributes;
     'spi-formation': Components.SpiFormationAttributes;
     'spi-header': Components.SpiHeaderAttributes;
@@ -101,12 +92,6 @@ declare global {
   var HTMLDetailEnseignantElement: {
     prototype: HTMLDetailEnseignantElement;
     new (): HTMLDetailEnseignantElement;
-  };
-
-  interface HTMLDetailSearchElement extends Components.DetailSearch, HTMLStencilElement {}
-  var HTMLDetailSearchElement: {
-    prototype: HTMLDetailSearchElement;
-    new (): HTMLDetailSearchElement;
   };
 
   interface HTMLSpiCandidatElement extends Components.SpiCandidat, HTMLStencilElement {}
@@ -160,7 +145,6 @@ declare global {
   interface HTMLElementTagNameMap {
     'add-ens': HTMLAddEnsElement
     'detail-enseignant': HTMLDetailEnseignantElement
-    'detail-search': HTMLDetailSearchElement
     'spi-candidat': HTMLSpiCandidatElement
     'spi-formation': HTMLSpiFormationElement
     'spi-header': HTMLSpiHeaderElement
@@ -174,7 +158,6 @@ declare global {
   interface ElementTagNameMap {
     'add-ens': HTMLAddEnsElement;
     'detail-enseignant': HTMLDetailEnseignantElement;
-    'detail-search': HTMLDetailSearchElement;
     'spi-candidat': HTMLSpiCandidatElement;
     'spi-formation': HTMLSpiFormationElement;
     'spi-header': HTMLSpiHeaderElement;
